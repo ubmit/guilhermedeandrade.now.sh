@@ -5,7 +5,7 @@
   "author": "Guilherme de Andrade <guilhermedeandrade@me.com>",
   "license": "MIT",
   "dependencies": {
-    "next": "^7.0.0",
+    "next": "latest",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },
