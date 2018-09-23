@@ -3,5 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Guilherme de Andrade <guilhermedeandrade@me.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "next": "^7.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
 }
