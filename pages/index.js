@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { injectGlobal } from 'styled-components';
 
 export default () => (
   <Table>
@@ -23,8 +22,8 @@ export default () => (
           <Link href="/blog">
             <Anchor>Blog </Anchor>
           </Link>
-          <Link href="https://github.com/ubmit">
-            <Anchor>GitHub</Anchor>
+          <Link href="/contact">
+            <Anchor>Contact</Anchor>
           </Link>
         </Cell>
       </tr>
@@ -32,17 +31,9 @@ export default () => (
   </Table>
 );
 
-injectGlobal`
-  body {
-    background: purple;
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    color: whitesmoke;
-  }
-`;
-
 const Anchor = styled.a`
   text-decoration: none;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
   &:hover {
     color: cyan;
   }
@@ -64,6 +55,7 @@ const Table = styled.table`
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 20px;
 `;
 
 const Cell = styled.td`

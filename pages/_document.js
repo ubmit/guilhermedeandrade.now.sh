@@ -1,5 +1,16 @@
 import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet, injectGlobal } from 'styled-components';
+
+injectGlobal`
+  body {
+    background: linear-gradient(45deg, purple, rgb(219, 112, 147));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+  }
+`;
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
