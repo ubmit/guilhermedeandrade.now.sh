@@ -5,7 +5,7 @@ import Emoji from '../components/Emoji';
 export default () => (
   <Wrapper>
     <Link href="/">
-      <Avatar src="http://i.imgur.com/xvVgOhz.jpg" alt="avatar" />
+      <Avatar src="https://i.imgur.com/vR2IyPw.jpg?1" alt="avatar" />
     </Link>
     <div>
       <Paragraph>
@@ -30,7 +30,9 @@ export default () => (
 );
 
 const Avatar = styled.img`
-  height: 200px;
+  width: 200px;
+  heigth: 200px;
+  border-radius: 50%;
   &:hover {
     opacity: 0.8;
   }
@@ -43,4 +45,6 @@ const Wrapper = styled.div`
 
 const Paragraph = styled.p`
   font-size: 18px;
+  text-align: justify;
+  text-justify: inter-word;
 `;
