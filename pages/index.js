@@ -1,90 +1,71 @@
-import Head from 'next/head';
 import Link from 'next/link';
+import styled from 'styled-components';
+import { injectGlobal } from 'styled-components';
 
 export default () => (
-  <div>
-    <Head>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="utf-8" />
-    </Head>
-
-    <style jsx global>{`
-      body {
-        background: purple;
-        font-size: 20px;
-        font-family: menlo;
-        color: whitesmoke;
-      }
-    `}</style>
-
-    <Content />
-  </div>
+  <Table>
+    <tbody>
+      <tr>
+        <Cell>
+          <SayMyName>Guilherme de Andrade</SayMyName>
+        </Cell>
+      </tr>
+      <tr>
+        <Cell>
+          <Anchor>Web Developer</Anchor>
+        </Cell>
+      </tr>
+      <tr>
+        <Cell>
+          <Link href="/about">
+            <Anchor>About </Anchor>
+          </Link>
+          <Link href="/blog">
+            <Anchor>Blog </Anchor>
+          </Link>
+          <Link href="https://github.com/ubmit">
+            <Anchor>GitHub</Anchor>
+          </Link>
+        </Cell>
+      </tr>
+    </tbody>
+  </Table>
 );
 
-const Content = () => (
-  <div>
-    <style jsx>{`
-      table {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
+injectGlobal`
+  body {
+    background: purple;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+  }
+`;
 
-      td {
-        padding-bottom: 0.5em;
-      }
+const Anchor = styled.a`
+  text-decoration: none;
+  &:hover {
+    color: cyan;
+  }
+`;
 
-      td span {
-        font-size: 30px;
-        font-weight: bold;
-        text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
-          0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
-      }
+const SayMyName = styled.span`
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+  &:hover {
+    color: gold;
+  }
+`;
 
-      td span:hover {
-        color: gold;
-      }
+const Table = styled.table`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
 
-      a {
-        text-decoration: none;
-        color: whitesmoke;
-      }
-
-      a:hover {
-        color: cyan;
-      }
-    `}</style>
-
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <span>Guilherme de Andrade</span>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <a>Web Developer</a>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <Link href="/about">
-              <a>About </a>
-            </Link>
-            <Link href="/blog">
-              <a>Blog </a>
-            </Link>
-            <Link href="https://github.com/ubmit">
-              <a>GitHub</a>
-            </Link>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-);
+const Cell = styled.td`
+  padding-bottom: 0.5em;
+`;
