@@ -9,6 +9,8 @@ injectGlobal`
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    width: 100%;
+    height: 100%;
     color: whitesmoke;
     -webkit-font-smoothing: antialiased;
   }
