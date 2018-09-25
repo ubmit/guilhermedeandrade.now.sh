@@ -31,21 +31,22 @@ export default () => (
     </Side>
     <Main>
       <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Imperdiet nulla
-        malesuada pellentesque elit eget. Iaculis at erat pellentesque
-        adipiscing commodo elit at. Velit dignissim sodales ut eu sem integer
-        vitae justo. Lorem mollis aliquam ut porttitor. Nibh praesent tristique
-        magna sit. Est pellentesque elit ullamcorper dignissim cras. Erat velit
-        scelerisque in dictum. Vulputate ut pharetra sit amet aliquam. Dui
-        sapien eget mi proin sed. Egestas maecenas pharetra convallis posuere.
-        Gravida arcu ac tortor dignissim convallis aenean et. In nibh mauris
-        cursus mattis molestie. Ipsum nunc aliquet bibendum enim facilisis.
-        Rutrum tellus pellentesque eu tincidunt. Facilisi etiam dignissim diam
-        quis enim lobortis scelerisque fermentum dui. Ac turpis egestas maecenas
-        pharetra convallis posuere. Aenean et tortor at risus viverra adipiscing
-        at in. Auctor elit sed vulputate mi sit amet mauris. Urna et pharetra
-        pharetra massa <Emoji symbol="✨" label="sparks-emoji" />
+        Hi! I'm Guilherme and I live in Porto, Portugal. I'm a really curious
+        person and the curiosity has led me to Web Development! Which is really
+        awesome, since the web never stops and there are always new technologies
+        to dive into. I've finally found the perfect career to feed my huge
+        curiosity.
+      </Paragraph>
+      <Paragraph>
+        At the moment I'm focusing on React and its ecosystem, but I have
+        already worked with Ruby on Rails and AngularJS. Lately I've been
+        studying and playing around a lot with Next.js and styled-components.
+        Another technology I'm looking forward to learn is GraphQL.
+      </Paragraph>
+      <Paragraph>
+        Besides development, I'm doing a masters degree in Electronic and
+        Computers Engineering, learning how to cook, trying to understand what
+        the Portugueses say and building keyboards in the free time.
       </Paragraph>
     </Main>
   </Layout>
@@ -79,7 +80,7 @@ const Avatar = styled.img`
 `;
 
 const Quote = styled.div`
-  font-size: 14px;
+  font-size: 15px;
   font-style: italic;
 `;
 
@@ -88,7 +89,7 @@ const Social = styled.div`
 `;
 
 const Icon = styled.i`
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   opacity: 0.6;
   transition: all 100ms linear;
   color: whitesmoke;
@@ -107,6 +108,6 @@ const Main = styled.div`
 `;
 
 const Paragraph = styled.p`
-  text-align: justify;
-  text-justify: inter-word;
+  /* text-align: justify;
+  text-justify: inter-word; */
 `;
