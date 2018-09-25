@@ -11,6 +11,7 @@ export default () => (
       <Quote>
         When I'm not writing JavaScript coding, I'll be building a keyboard
       </Quote>
+      <Social />
     </Side>
     <Main>
       <Paragraph>
@@ -34,6 +35,19 @@ export default () => (
   </Layout>
 );
 
+const Layout = styled.div`
+  margin: 3rem auto;
+  max-width: 800px;
+  display: flex;
+`;
+
+const Side = styled.div`
+  flex: 30%;
+  text-align: center;
+  margin-top: 1rem;
+  margin-right: 3rem;
+`;
+
 const Avatar = styled.img`
   width: 200px;
   heigth: 200px;
@@ -43,21 +57,14 @@ const Avatar = styled.img`
   }
 `;
 
-const Layout = styled.div`
-  margin: 3rem auto;
-  max-width: 800px;
-  display: flex;
-`;
-
-const Side = styled.div`
-  margin-top: 1rem;
-  flex: 30%;
-`;
-
 const Quote = styled.div`
   margin-top: 1rem;
   font-size: 14px;
   font-style: italic;
+`;
+
+const Social = styled.div`
+  margin-top: 1rem;
 `;
 
 const Main = styled.div`
@@ -65,7 +72,6 @@ const Main = styled.div`
 `;
 
 const Paragraph = styled.p`
-  font-size: 18px;
   text-align: justify;
   text-justify: inter-word;
 `;

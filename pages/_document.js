@@ -3,12 +3,14 @@ import { ServerStyleSheet, injectGlobal } from 'styled-components';
 
 injectGlobal`
   body {
-    background: linear-gradient(45deg, purple, rgb(219, 112, 147));
+    background: linear-gradient(340deg, purple, #991346);
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     color: whitesmoke;
+    -webkit-font-smoothing: antialiased;
   }
 `;
 
