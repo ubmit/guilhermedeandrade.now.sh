@@ -22,9 +22,6 @@ export default () => (
           <Link href="/blog">
             <Anchor>Blog </Anchor>
           </Link>
-          <Link href="/contact">
-            <Anchor>Contact</Anchor>
-          </Link>
         </Cell>
       </tr>
     </tbody>

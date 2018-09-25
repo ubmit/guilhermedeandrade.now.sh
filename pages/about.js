@@ -6,30 +6,46 @@ export default () => (
   <Layout>
     <Side>
       <Link href="/">
-        <Avatar src="https://i.imgur.com/vR2IyPw.jpg?1" alt="avatar" />
+        <Avatar src="https://i.imgur.com/BjAVDPh.jpg?1" alt="avatar" />
       </Link>
       <Quote>
         When I'm not writing JavaScript coding, I'll be building a keyboard
       </Quote>
-      <Social />
+      <Social>
+        <Link href="mailto:guilhermedeandrade@me.com">
+          <a>
+            <Icon className="fas fa-envelope" style={iconMargin} />
+          </a>
+        </Link>
+        <Link href="https://github.com/ubmit">
+          <a>
+            <Icon className="fab fa-github" style={iconMargin} />
+          </a>
+        </Link>
+        <Link href="https://twitter.com/ubmit">
+          <a>
+            <Icon className="fab fa-twitter" />
+          </a>
+        </Link>
+      </Social>
     </Side>
     <Main>
       <Paragraph>
-        Annoy the old grumpy cat, start a fight and then retreat to wash when i
-        lose eat an easter feather as if it were a bird then burp victoriously,
-        but tender leave hair everywhere. Plan steps for world domination cats
-        making all the muffins but roll over and sun my belly damn that dog head
-        nudges i just saw other cats inside the house and nobody ask me before
-        using my litter box but sleep on my human's head. Cats are fats i like
-        to pets them they like to meow back find a way to fit in tiny box
-        yowling nonstop the whole night stares at human while pushing stuff off
-        a table yet knock dish off table head butt cant eat out of my own dish
-        chase after silly colored fish toys around the house instantly break out
-        into full speed gallop across the house for no reason. Meow to be let in
-        poop in a handbag look delicious and drink the soapy mopping up water
-        then puke giant foamy fur-balls. Twitch tail in permanent irritation
-        lick the curtain just to be annoying meow in empty rooms meow and walk
-        away. <Emoji symbol="🐱" label="kitten" />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Imperdiet nulla
+        malesuada pellentesque elit eget. Iaculis at erat pellentesque
+        adipiscing commodo elit at. Velit dignissim sodales ut eu sem integer
+        vitae justo. Lorem mollis aliquam ut porttitor. Nibh praesent tristique
+        magna sit. Est pellentesque elit ullamcorper dignissim cras. Erat velit
+        scelerisque in dictum. Vulputate ut pharetra sit amet aliquam. Dui
+        sapien eget mi proin sed. Egestas maecenas pharetra convallis posuere.
+        Gravida arcu ac tortor dignissim convallis aenean et. In nibh mauris
+        cursus mattis molestie. Ipsum nunc aliquet bibendum enim facilisis.
+        Rutrum tellus pellentesque eu tincidunt. Facilisi etiam dignissim diam
+        quis enim lobortis scelerisque fermentum dui. Ac turpis egestas maecenas
+        pharetra convallis posuere. Aenean et tortor at risus viverra adipiscing
+        at in. Auctor elit sed vulputate mi sit amet mauris. Urna et pharetra
+        pharetra massa <Emoji symbol="✨" label="sparks-emoji" />
       </Paragraph>
     </Main>
   </Layout>
@@ -44,21 +60,25 @@ const Layout = styled.div`
 const Side = styled.div`
   flex: 30%;
   text-align: center;
-  margin-top: 1rem;
   margin-right: 3rem;
 `;
 
 const Avatar = styled.img`
+  margin: 1rem auto;
   width: 200px;
-  heigth: 200px;
+  height: 200px;
   border-radius: 50%;
-  &:hover {
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  transition: all 100ms linear;
+
+  :hover {
     opacity: 0.8;
   }
 `;
 
 const Quote = styled.div`
-  margin-top: 1rem;
   font-size: 14px;
   font-style: italic;
 `;
@@ -66,6 +86,21 @@ const Quote = styled.div`
 const Social = styled.div`
   margin-top: 1rem;
 `;
+
+const Icon = styled.i`
+  font-size: 1.5rem;
+  opacity: 0.6;
+  transition: all 100ms linear;
+  color: whitesmoke;
+
+  :hover {
+    opacity: 1;
+  }
+`;
+
+const iconMargin = {
+  marginRight: '1rem'
+};
 
 const Main = styled.div`
   flex: 70%;

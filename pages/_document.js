@@ -28,8 +28,17 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>My page</title>
+          <title>
+            Guilherme de Andrade - Frontend Development, JavaScript, React
+          </title>
           {this.props.styleTags}
+
+          <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+            integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB"
+            crossorigin="anonymous"
+          />
         </Head>
         <body>
           <Main />
