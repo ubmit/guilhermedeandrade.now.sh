@@ -6,13 +6,13 @@ injectGlobal`
     background: linear-gradient(340deg, purple, #991346);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: whitesmoke;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    -webkit-font-smoothing: antialiased;
     width: 100%;
     height: 100%;
-    color: whitesmoke;
-    -webkit-font-smoothing: antialiased;
   }
 `;
 
@@ -34,8 +34,8 @@ export default class MyDocument extends Document {
             Guilherme de Andrade - Frontend Development, JavaScript, React
           </title>
           {this.props.styleTags}
-
           <script defer src="/static/icons/icons.min.js" />
+          <link rel="shortcut icon" href="/static/favicon/GA.ico" />
         </Head>
         <body>
           <Main />
