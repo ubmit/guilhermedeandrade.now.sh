@@ -1,69 +1,60 @@
-import Link from 'next/link';
 import styled from 'styled-components';
+import Link from 'next/link';
+
+import Layout from '../components/Layout';
+import Sidebar from '../components/Sidebar';
+import Main from '../components/Main';
 
 export default () => (
-  <Table>
-    <tbody>
-      <tr>
-        <Cell>
-          <SayMyName>Guilherme de Andrade</SayMyName>
-        </Cell>
-      </tr>
-      <tr>
-        <Cell>
-          <Anchor>Web Developer</Anchor>
-        </Cell>
-      </tr>
-      <tr>
-        <Cell>
-          <Link href="/about">
-            <Anchor>About </Anchor>
-          </Link>
-          <Link href="/blog">
-            <Anchor>Blog </Anchor>
-          </Link>
-        </Cell>
-      </tr>
-    </tbody>
-  </Table>
+  <Layout>
+    <Sidebar />
+    <Main>
+      <Paragraph>
+        Hi! I'm <span>Guilherme</span> and I live in{' '}
+        <span>Porto, Portugal</span>. <span>I'm a really curious person</span>{' '}
+        and the curiosity has led me to <span>Web Development</span>! Which is
+        really awesome, since the web world never sleeps and there are always
+        new technologies to dive into. I've finally found the perfect career to
+        feed my huge curiosity.
+      </Paragraph>
+      <Paragraph>
+        At the moment I'm focusing on <span>React</span> and its ecosystem, but
+        I have already worked with <span>Ruby on Rails</span> and{' '}
+        <span>AngularJS</span>. Lately I've been studying and playing around a
+        lot with <span>Next.js</span> and <span>styled-components</span>.
+        Another technology I'm looking forward to learning is{' '}
+        <span>GraphQL</span>.
+      </Paragraph>
+      <Paragraph>
+        Along with development, I'm doing a{' '}
+        <span>masters degree in Electronic and Computers Engineering</span>,
+        learning how to cook, trying to understand what the Portuguese people
+        say and <span>building keyboards</span> in my free time.
+      </Paragraph>
+      <Paragraph>
+        I'll also start to write some stuff
+        <Link href="/gossips">
+          <a> here</a>
+        </Link>
+        !
+      </Paragraph>
+    </Main>
+  </Layout>
 );
 
-const Anchor = styled.a`
-  text-decoration: none;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-  font-size: 1.5rem;
-  transition: all 100ms linear;
-
-  :hover {
+const Paragraph = styled.p`
+  span :hover {
     color: gold;
   }
-`;
 
-const SayMyName = styled.span`
-  font-size: 3rem;
-  font-weight: bold;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
-    0px 18px 23px rgba(0, 0, 0, 0.1);
-  transition: all 100ms linear;
+  a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    transition: all 100ms linear;
+  }
 
-  :hover {
+  a :hover {
     color: gold;
   }
-`;
-
-const Table = styled.table`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-`;
-
-const Cell = styled.td`
-  padding-bottom: 0.5em;
 `;
