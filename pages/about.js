@@ -9,7 +9,7 @@ export default () => (
         <Avatar src="https://i.imgur.com/BjAVDPh.jpg?1" alt="avatar" />
       </Link>
       <Quote>
-        When I'm not writing JavaScript coding, I'll be building a keyboard
+        When I'm not writing JavaScript code, I'll be building a keyboard
       </Quote>
       <Social>
         <Link href="mailto:guilhermedeandrade@me.com">
@@ -88,7 +88,7 @@ const Social = styled.div`
 `;
 
 const Icon = styled.i`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   opacity: 0.6;
   transition: all 100ms linear;
   color: whitesmoke;
