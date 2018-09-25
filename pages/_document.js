@@ -35,12 +35,7 @@ export default class MyDocument extends Document {
           </title>
           {this.props.styleTags}
 
-          <script
-            defer
-            src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-            integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB"
-            crossorigin="anonymous"
-          />
+          <script defer src="/static/icons/icons.min.js" />
         </Head>
         <body>
           <Main />
