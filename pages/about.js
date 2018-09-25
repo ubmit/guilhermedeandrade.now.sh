@@ -6,7 +6,7 @@ export default () => (
   <Layout>
     <Side>
       <Link href="/">
-        <Avatar src="https://i.imgur.com/BjAVDPh.jpg?1" alt="avatar" />
+        <Avatar src={'/static/images/avatar.jpg'} alt="avatar" />
       </Link>
       <Quote>
         When I'm not writing JavaScript code, I'll be building a keyboard
