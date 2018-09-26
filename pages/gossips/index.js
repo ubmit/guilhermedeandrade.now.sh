@@ -1,25 +1,17 @@
-import Link from 'next/link';
 import styled from 'styled-components';
-import Emoji from '../../components/Emoji';
-
 import Layout from '../../components/Layout';
-import Sidebar from '../../components/Sidebar';
-import Main from '../../components/Main';
 
 export default () => (
   <Layout>
-    <Sidebar />
-    <Main>
-      <Wrapper>
-        <Message>coming soon!</Message>
-        <iframe
-          src="https://giphy.com/embed/lJNoBCvQYp7nq"
-          width="300"
-          height="300"
-          frameBorder="0"
-        />
-      </Wrapper>
-    </Main>
+    <Wrapper>
+      <Message>coming soon!</Message>
+      <iframe
+        src="https://giphy.com/embed/lJNoBCvQYp7nq"
+        width="300"
+        height="300"
+        frameBorder="0"
+      />
+    </Wrapper>
   </Layout>
 );
 
