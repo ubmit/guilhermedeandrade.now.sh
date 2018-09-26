@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
           </title>
           {this.props.styleTags}
           <script defer src="/static/icons/icons.min.js" />
-          <link rel="shortcut icon" href="/static/favicon/GA.ico" />
+          <link rel="shortcut icon" href="/static/favicon/ga.ico" />
         </Head>
         <body>
           <Main />

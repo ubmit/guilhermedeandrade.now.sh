@@ -17,8 +17,6 @@ export default () => (
           width="300"
           height="300"
           frameBorder="0"
-          class="giphy-embed"
-          allowFullScreen
         />
       </Wrapper>
     </Main>
