@@ -41,6 +41,7 @@ const Paragraph = styled.p`
 
   span :hover {
     color: gold;
+    text-shadow: 0px 2px 2px rgba(0, 255, 255, 0.3);
   }
 
   a {
@@ -52,5 +53,6 @@ const Paragraph = styled.p`
 
   a :hover {
     color: gold;
+    text-shadow: 0px 2px 2px rgba(0, 255, 255, 0.3);
   }
 `;

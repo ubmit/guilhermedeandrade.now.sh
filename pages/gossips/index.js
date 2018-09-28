@@ -24,6 +24,7 @@ const Message = styled.div`
 
   :hover {
     color: gold;
+    text-shadow: 2px 4px 3px rgba(0, 255, 255, 0.3);
   }
 `;
 
