@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import Emoji from '../components/Emoji';
 
 export default () => (
   <Layout>
@@ -12,17 +13,18 @@ export default () => (
       finally found the perfect career to feed my huge curiosity.
     </Paragraph>
     <Paragraph>
-      At the moment I'm focusing on <span>React</span> and its ecosystem, but I
-      have already worked with <span>Ruby on Rails</span> and{' '}
-      <span>AngularJS</span>. Lately I've been studying and playing around a lot
-      with <span>Next.js</span> and <span>styled-components</span>. Another
-      technology I'm looking forward to learning is <span>GraphQL</span>.
+      At the moment I'm focusing on <span>React</span> and its ecosystem, but
+      I've already worked with <span>Ruby on Rails</span>,{' '}
+      <span>AngularJS</span> and <span>PostgreSQL</span>. Lately I've been
+      studying and playing around a lot with <span>Next.js</span> and{' '}
+      <span>styled-components</span>. Another technology I'm looking forward to
+      learning is <span>GraphQL</span>.
     </Paragraph>
     <Paragraph>
-      Along with development, I'm doing a{' '}
-      <span>masters degree in Electronic and Computers Engineering</span>,
-      learning how to cook, trying to understand what the Portuguese people say
-      and <span>building keyboards</span> in my free time.
+      Along with development, I'm doing a masters degree in Electrical and
+      Computers Engineering, learning how to cook, playing Futsal, trying to
+      understand what the Portuguese people say and building keyboards in my
+      free time.
     </Paragraph>
     <Paragraph>
       I'll also start to write some stuff
