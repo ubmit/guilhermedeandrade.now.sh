@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import Emoji from '../components/Emoji';
 
 export default () => (
   <Layout>
