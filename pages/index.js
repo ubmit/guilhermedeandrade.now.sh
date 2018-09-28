@@ -35,6 +35,10 @@ export default () => (
 );
 
 const Paragraph = styled.p`
+  span {
+    transition: all 100ms linear;
+  }
+
   span :hover {
     color: gold;
   }
