@@ -14,7 +14,6 @@ app
     server.get('/gossips/:id', (req, res) => {
       const actualPage = '/gossips/gossip';
       const queryParams = { id: req.params.id };
-      console.log(queryParams);
       app.render(req, res, actualPage, queryParams);
     });
 
