@@ -21,8 +21,8 @@ Index.getInitialProps = async ({ query }) => {
 };
 
 const renderGossips = gossips => {
-  return gossips.map(({ slug, title }) => {
-    return <GossipLink key={slug} title={title} slug={slug} />;
+  return gossips.map(({ slug, title }, index) => {
+    return <GossipLink key={index} title={title} slug={slug} />;
   });
 };
 
