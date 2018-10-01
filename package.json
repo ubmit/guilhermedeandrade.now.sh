@@ -5,6 +5,7 @@
   "author": "Guilherme de Andrade <guilhermedeandrade@me.com>",
   "license": "MIT",
   "dependencies": {
+    "buttercms": "^1.1.1",
     "next": "latest",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

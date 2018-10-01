@@ -1,18 +1,37 @@
 import styled from 'styled-components';
 import Layout from '../../components/Layout';
+import Link from 'next/link';
+import Butter from 'buttercms';
+const butter = Butter('8de2baa15d149154c11e3f486dce91ff6f31dbe8');
 
-export default () => (
+const Index = ({ gossips }) => (
   <Layout>
     <Wrapper>
-      <Message>coming soon!</Message>
-      <iframe
-        src="https://giphy.com/embed/lJNoBCvQYp7nq"
-        width="300"
-        height="300"
-        frameBorder="0"
-      />
+      <Message>Gossips</Message>
+      <Gossips>{renderGossips(gossips)}</Gossips>
     </Wrapper>
   </Layout>
+);
+
+Index.getInitialProps = async ({ query }) => {
+  let page = query.page || 1;
+
+  const resp = await butter.post.list({ page: page, page_size: 10 });
+  return { gossips: resp.data.data };
+};
+
+const renderGossips = gossips => {
+  return gossips.map(({ slug, title }) => {
+    return <GossipLink key={slug} title={title} slug={slug} />;
+  });
+};
+
+const GossipLink = ({ slug, title }) => (
+  <li>
+    <Link as={`/gossips/${slug}`} href={`/gossips/?slug=${slug}`}>
+      <Anchor>{title}</Anchor>
+    </Link>
+  </li>
 );
 
 const Message = styled.div`
@@ -32,3 +51,18 @@ const Wrapper = styled.div`
   display: block;
   text-align: center;
 `;
+
+const Anchor = styled.a`
+  text-decoration: none;
+  transition: all 100ms linear;
+  :hover {
+    color: gold;
+    text-shadow: 0px 2px 2px rgba(0, 255, 255, 0.3);
+  }
+`;
+
+const Gossips = styled.ul`
+  text-align: left;
+`;
+
+export default Index;
