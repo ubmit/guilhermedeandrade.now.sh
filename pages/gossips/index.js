@@ -27,7 +27,7 @@ const renderGossips = gossips => {
 
 const GossipLink = ({ slug, title }) => (
   <li>
-    <Link as={`/gossips/${slug}`} href={`/gossips/?slug=${slug}`}>
+    <Link href={`/gossips/gossip?slug=${slug}`} as={`/gossips/${slug}`}>
       <Anchor>{title}</Anchor>
     </Link>
   </li>

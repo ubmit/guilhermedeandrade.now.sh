@@ -9,8 +9,7 @@ const Gossip = ({ gossip: { title, body } }) => (
 );
 
 Gossip.getInitialProps = async ({ query }) => {
-  // const { slug } = query;
-  const slug = 'example-post';
+  const { slug } = query;
   const resp = await butter.post.retrieve(slug);
   return { gossip: resp.data.data };
 };

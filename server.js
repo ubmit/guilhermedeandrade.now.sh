@@ -4,17 +4,15 @@ const next = require('next');
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 app
   .prepare()
   .then(() => {
     const server = express();
 
-    server.get('/gossips/:id', (req, res) => {
-      const actualPage = '/gossips/gossip';
-      const queryParams = { id: req.params.id };
-      app.render(req, res, actualPage, queryParams);
+    server.get('/gossips/:slug', (req, res) => {
+      return app.render(req, res, '/gossips/gossip', { slug: req.params.slug });
     });
 
     server.get('*', (req, res) => {
