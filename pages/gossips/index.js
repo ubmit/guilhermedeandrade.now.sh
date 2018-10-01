@@ -47,7 +47,8 @@ const Message = styled.div`
 `;
 
 const Wrapper = styled.div`
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 `;
 

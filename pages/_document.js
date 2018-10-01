@@ -2,6 +2,11 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet, injectGlobal } from 'styled-components';
 
 injectGlobal`
+  html, body { 
+    height: 100%;
+    margin: 0;
+  }
+
   body {
     background: linear-gradient(340deg, purple, #991346);
     background-repeat: no-repeat;

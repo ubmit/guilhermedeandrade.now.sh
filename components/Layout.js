@@ -1,19 +1,24 @@
 import styled from 'styled-components';
 import Sidebar from './Sidebar';
+import Footer from './Footer';
 
 export default ({ children }) => (
-  <Wrapper>
-    <Sidebar />
-    <Main>{children}</Main>
-  </Wrapper>
+  <div>
+    <Row>
+      <Sidebar />
+      <Content>{children}</Content>
+    </Row>
+    <Footer />
+  </div>
 );
 
-const Wrapper = styled.div`
+const Row = styled.div`
   margin: 3rem auto;
   max-width: 800px;
   display: flex;
+  flex-direction: row;
 `;
 
-const Main = styled.div`
+const Content = styled.div`
   flex: 70%;
 `;
