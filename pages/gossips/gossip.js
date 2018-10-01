@@ -1,6 +1,5 @@
 import Layout from '../../components/Layout';
-import Butter from 'buttercms';
-const butter = Butter('8de2baa15d149154c11e3f486dce91ff6f31dbe8');
+import butter from '../../dist/butterToken';
 
 const Gossip = ({ gossip: { title, body } }) => (
   <Layout>
