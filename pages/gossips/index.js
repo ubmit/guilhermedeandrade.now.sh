@@ -5,64 +5,80 @@ import butter from '../../dist/butterToken';
 
 const Index = ({ gossips }) => (
   <Layout>
-    <Wrapper>
-      <Message>Gossips</Message>
-      <Gossips>{renderGossips(gossips)}</Gossips>
-    </Wrapper>
+    <GossipsList>{renderGossips(gossips)}</GossipsList>
   </Layout>
 );
 
 Index.getInitialProps = async ({ query }) => {
   let page = query.page || 1;
-
   const resp = await butter.post.list({ page: page, page_size: 10 });
   return { gossips: resp.data.data };
 };
 
 const renderGossips = gossips => {
-  return gossips.map(({ slug, title }, index) => {
-    return <GossipLink key={index} title={title} slug={slug} />;
+  return gossips.map(({ slug, title, created, summary }, index) => {
+    const d = new Date(created);
+    const createdDate = d.toLocaleDateString('pt-BR');
+
+    return (
+      <GossipLink
+        key={index}
+        slug={slug}
+        title={title}
+        created={createdDate}
+        summary={summary}
+      />
+    );
   });
 };
 
-const GossipLink = ({ slug, title }) => (
-  <li>
-    <Link href={`/gossips/gossip?slug=${slug}`} as={`/gossips/${slug}`}>
-      <Anchor>{title}</Anchor>
-    </Link>
-  </li>
+const GossipLink = ({ slug, title, created, summary }) => (
+  <Link href={`/gossips/gossip?slug=${slug}`} as={`/gossips/${slug}`}>
+    <Gossip>
+      <CreatedDate>{created}</CreatedDate>
+      <Title>{title}</Title>
+      <Summary>{summary}</Summary>
+    </Gossip>
+  </Link>
 );
 
-const Message = styled.div`
-  color: whitesmoke;
-  font-size: 2rem;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-  transition: all 100ms linear;
-  margin-bottom: 2rem;
-
-  :hover {
-    color: gold;
-    text-shadow: 2px 4px 3px rgba(0, 255, 255, 0.3);
-  }
+const Title = styled.div`
+  font-size: 20px;
+  font-weight: bold;
 `;
 
-const Wrapper = styled.div`
+const CreatedDate = styled.div`
+  font-size: 12px;
+`;
+
+const Summary = styled.div`
+  font-size: 14px;
+  font-style: italic;
+`;
+
+const Gossip = styled.li`
   display: flex;
   flex-direction: column;
-  text-align: center;
-`;
 
-const Anchor = styled.a`
-  text-decoration: none;
-  transition: all 100ms linear;
+  :not(:first-child) {
+    margin-top: 1em;
+  }
+
   :hover {
     color: gold;
     text-shadow: 0px 2px 2px rgba(0, 255, 255, 0.3);
   }
+
+  div:not(:first-child) {
+    margin-top: 0.1em;
+  }
 `;
 
-const Gossips = styled.ul`
-  text-align: left;
+const GossipsList = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 `;
 
 export default Index;
