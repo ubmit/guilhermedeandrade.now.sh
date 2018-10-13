@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import Sidebar from './Sidebar';
+import Header from './Header';
 import Footer from './Footer';
 
 export default ({ children }) => (
   <Column>
+    <Header />
     <Row>
       <Sidebar />
       <Content>{children}</Content>
