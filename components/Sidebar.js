@@ -35,8 +35,8 @@ const Wrapper = styled.div`
 
 const Avatar = styled.img`
   margin: 1rem auto;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   -webkit-border-radius: 99em;
   -moz-border-radius: 99em;
