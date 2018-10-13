@@ -30,9 +30,10 @@ const Wrapper = styled.ul`
     text-decoration: none;
     color: whitesmoke;
     transition: all 100ms linear;
+  }
 
-    :hover {
-      opacity: 0.8;
-    }
+  a:nth-child(2n + 1):hover {
+    color: gold;
+    text-shadow: 0px 2px 2px rgba(0, 255, 255, 0.3);
   }
 `;
