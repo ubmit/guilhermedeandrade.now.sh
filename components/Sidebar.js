@@ -30,7 +30,8 @@ export default () => (
 const Wrapper = styled.div`
   flex: 30%;
   text-align: center;
-  margin-right: 3rem;
+  margin-right: 2rem;
+  flex-shrink: 0;
 `;
 
 const Avatar = styled.img`
