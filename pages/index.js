@@ -21,9 +21,8 @@ export default () => (
     </Paragraph>
     <Paragraph>
       Along with development, I'm doing a masters degree in Electrical and
-      Computers Engineering, learning how to cook, playing Futsal, trying to
-      understand what the Portuguese people say and building keyboards in my
-      free time.
+      Computers Engineering, learning how to cook, playing Futsal and building
+      keyboards in my free time.
     </Paragraph>
     <Paragraph>
       I'll also start to write some stuff
