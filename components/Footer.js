@@ -12,7 +12,8 @@ export default () => (
 );
 
 const Wrapper = styled.div`
-  text-align: center;
+  display: flex;
+  justify-content: center;
 `;
 
 const Butter = styled.img`
