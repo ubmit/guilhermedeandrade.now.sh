@@ -13,19 +13,13 @@ export default () => (
 
 const Wrapper = styled.div`
   text-align: center;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  opacity: 0.8;
-  background: purple;
 `;
 
 const Butter = styled.img`
-  opacity: 0.8;
+  opacity: 1;
   height: 30px;
 
   :hover {
-    opacity: 1;
+    opacity: 0.8;
   }
 `;
