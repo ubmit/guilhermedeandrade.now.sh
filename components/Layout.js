@@ -23,7 +23,7 @@ const Column = styled.div`
 
 const Row = styled.div`
   margin: 3rem auto;
-  max-width: 800px;
+  max-width: 1000px;
   display: flex;
   flex-direction: row;
   width: 100%;

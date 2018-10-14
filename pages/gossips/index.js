@@ -59,6 +59,7 @@ const Summary = styled.div`
 const Gossip = styled.li`
   display: flex;
   flex-direction: column;
+  width: 500px;
 
   :not(:first-child) {
     margin-top: 1em;
@@ -69,8 +70,12 @@ const Gossip = styled.li`
     text-shadow: 0px 2px 2px rgba(0, 255, 255, 0.3);
   }
 
-  div:not(:first-child) {
+  div:nth-child(2) {
     margin-top: 0.1em;
+  }
+
+  div:last-child {
+    margin-top: 0.4em;
   }
 `;
 

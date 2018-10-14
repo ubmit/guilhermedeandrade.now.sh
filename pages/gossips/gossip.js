@@ -16,7 +16,9 @@ Gossip.getInitialProps = async ({ query }) => {
 };
 
 const Wrapper = styled.div`
-  font-size: 18px;
+  line-height: 1.5em;
+  text-align: justify;
+  text-justify: inter-word;
 
   img {
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
@@ -31,6 +33,20 @@ const Wrapper = styled.div`
     margin-top: 0.5em;
     font-size: 14px;
     font-style: italic;
+  }
+
+  blockquote {
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+
+    :hover {
+      opacity: 0.8;
+    }
+
+    p {
+      text-indent: 0;
+    }
   }
 `;
 
