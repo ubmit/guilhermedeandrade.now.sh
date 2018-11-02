@@ -17,8 +17,8 @@ Gossip.getInitialProps = async ({ query }) => {
 
 const Wrapper = styled.div`
   line-height: 1.5em;
-  text-align: justify;
-  text-justify: inter-word;
+  /* text-align: justify; */
+  /* text-justify: inter-word; */
 
   img {
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
